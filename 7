@@ -1,0 +1,21 @@
+n = 1
+x = 1
+array = [2]
+running = True
+while n < 10001:
+    x += 2
+    for i in array:
+        if x % i == 0:
+            running = False
+            break
+        if i >= x ** 0.5:
+            break
+
+    if running:
+        array.append(x)
+        n += 1
+
+    running = True
+    
+
+print(x)
